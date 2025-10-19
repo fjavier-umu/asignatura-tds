@@ -25,6 +25,10 @@ Plan para la sesión 3:
 - Eventos
 - Listas y tablas
 
-# Boletines
+# Boletines y recursos
 
-* [Boletín 1](boletin1.md)
+* [Boletín 1](boletin1.md) - [Video configuración software]()
+  * [Eclipse Downloads](https://www.eclipse.org/downloads/packages/) Versión 2025-09
+  * [JavaFX Download](https://gluonhq.com/products/javafx/) Versión 21
+  * [Scene Builder Download](https://gluonhq.com/products/scene-builder/) Versión 21
+    
