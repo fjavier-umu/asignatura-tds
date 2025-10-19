@@ -27,7 +27,7 @@ Plan para la sesión 3:
 
 # Boletines y recursos
 
-* [Boletín 1](boletin1.md) - [Video configuración software]()
+* [Boletín 1](boletin1.md) - [Video configuración software](https://urldefense.com/v3/__https://umurcia.zoom.us/rec/share/1qGBQ46j04cHusniGCeZrgRebdgWut7vFDBiWRCCyOY6j6hzvqX3kTsP9ixNNWM5.dwj7j_bNFEr0DCb1__;!!D9dNQwwGXtA!QCpD8DCTi5H2L8i_sjHpQqJd64ZTjACiOSjmbqD1z4O6kaJC3W6vCpaMhy1z5uhgycr4q-y0POTzYKQ$) password: 1uKB%bf8
   * [Eclipse Downloads](https://www.eclipse.org/downloads/packages/) Versión 2025-09
   * [JavaFX Download](https://gluonhq.com/products/javafx/) Versión 21
   * [Scene Builder Download](https://gluonhq.com/products/scene-builder/) Versión 21
