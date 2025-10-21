@@ -54,12 +54,10 @@ Por otra parte, también hay que añadir las dependencias.
 </dependencies>
 ```
 
-TODO: Explicar que lleva esta dependencia y si hay otras interesantes
-
 La siguiente imagen muestra la compatibilidad de las diferentes versiones de JavaFX y JDK
 (obtenida de https://gluonhq.com/products/javafx/)
 
-![Tabla de compatbilidad de JavaFX](/javafx-boletines/imagenes/compatibilidad.png)
+![Tabla de compatbilidad de JavaFX](imagenes/compatibilidad.png)
 
 Hay dos formas en que podemos ejecutar JavaFX. 
 
