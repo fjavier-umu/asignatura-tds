@@ -276,6 +276,10 @@ Otros contenedores útiles pueden ser:
 | **SplitPane**  | Divide el espacio en áreas redimensionables.                   |
 
 
+**Ejercicio:**
+1. Crea una ventana de LOGIN con los campos usuario y contraseña, uno encima del otro.
+2. En la parte inferior de la ventana coloca un botón de "login".
+
 ## Controles en JavaFX
 
 ### Label
