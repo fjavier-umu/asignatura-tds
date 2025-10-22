@@ -1,7 +1,6 @@
 # Prácticas de JavaFX
 
 ## Organización
-
 Plan para la sesión 1:
 
 1. Instalar JavaFX y hacer un hola mundo
@@ -13,17 +12,18 @@ Plan para la sesión 1:
 
 Plan para la sesión 2:
 
-- El formato FXML en más detalle
-- Scene builder - más layouts
-- Scene builder - más componentes
-- Arquitectura de una GUI en JavaFX (Controller, bindings, etc.)
-- Property bindings
+1. El formato FXML en más detalle
+2. Scene builder - más layouts
+3. Scene builder - más componentes
+4. Arquitectura de una GUI en JavaFX (Controller, bindings, etc.)
+5. Property bindings
 
 Plan para la sesión 3:
 
-- Personalización
-- Eventos
-- Listas y tablas
+1. Personalización
+2. Eventos
+3. Listas y tablas
+
 
 # Boletines y recursos
 
@@ -31,4 +31,6 @@ Plan para la sesión 3:
   * [Eclipse Downloads](https://www.eclipse.org/downloads/packages/) Versión 2025-09
   * [JavaFX Download](https://gluonhq.com/products/javafx/) Versión 21
   * [Scene Builder Download](https://gluonhq.com/products/scene-builder/) Versión 25
+ 
+* [Boletín 2](boletin2.md)
     
