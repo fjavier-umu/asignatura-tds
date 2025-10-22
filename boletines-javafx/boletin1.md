@@ -94,16 +94,10 @@ de JavaFx que deben activarse. Para ello hay que realizar dos pasos:
 
 Hay un un plugin para Eclipse que permite crear ficheros FXML y abrir Scene Builder desde Eclipse.
 
+Instalar el pulgin de JavaFX para Eclipse en su **versión 3.11** (solo disponible como update-site, no en el marketplace)
+[e(fx)clipse 3.11 Plugin - update site](https://download.eclipse.org/efxclipse/updates-nightly/repository/) 
 
-```
-Help -> Eclipse Marketplace -> Buscar “e(fx)clipse” -> Install.
-```
-
-También es posible instalarlo desde este update site.
-
-```
-https://download.eclipse.org/efxclipse/updates-nightly/repository/
-```
+NOTA: **No** usar **Eclipse MarketPlace** para la instalación del plugin.
 
 ## 1. Primera ventana en JavaFX
 
