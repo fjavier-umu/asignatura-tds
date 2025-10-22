@@ -70,9 +70,9 @@ Los controles en JavaFX tienen propiedades. Se pueden establecer los valores de 
 
 El anterior ejemplo muestra las dos formas de definir propiedades en los controles. 
 
-**Uso de elementos anidados**: El atributo de espaciado del elemento *VBox*. El valor establecido en el atributo de espaciado se pasa como parámetro al método *setSpacing()* del objeto *VBox* creado a partir de dicho elemento.
+**Uso de atributos**: El atributo de espaciado del elemento *VBox*. El valor establecido en el atributo de espaciado se pasa como parámetro al método *setSpacing()* del objeto *VBox* creado a partir de dicho elemento.
 
-**Uso de atributos**: El elemento *children* anidado dentro del elemento *VBox*. Este elemento corresponde al método *getChildren()* de la clase *VBox*. Los elementos anidados dentro del elemento *children* se convertirán en componentes JavaFX que se añadirán a la colección obtenida mediante el método *getChildren()* del objeto *VBox* representado por el elemento VBox padre.
+**Uso de elementos anidados**: El elemento *children* anidado dentro del elemento *VBox*. Este elemento corresponde al método *getChildren()* de la clase *VBox*. Los elementos anidados dentro del elemento *children* se convertirán en componentes JavaFX que se añadirán a la colección obtenida mediante el método *getChildren()* del objeto *VBox* representado por el elemento VBox padre.
 
 También se puede ver cómo se establecen los atributos de texto de los dos elementos *Label* anidados dentro de *children*. Los valores de los atributos de texto se pasarán como parámetros a la propiedad *setText()* de los objetos *Label*.
 
