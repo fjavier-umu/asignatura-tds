@@ -608,7 +608,8 @@ JavaFX promueve una estructura muy parecida a **MVC (Modelo–Vista–Controlado
 
 * **Controlador (Controller)**: maneja la lógica de interacción entre la vista y el modelo. Está vinculado al FXML.
 
-### Controlador en ficheros FXML
+  
+### Controlador en ficheros FXML
 
 Se puede configurar una **clase controladora** para un documento FXML. Una clase Controlador FXML permite enlazar los componentes de la interfaz gráfica declarados en el FXML, haciendo que la clase Controlador actúe como mediador donde delegar cuando se producen eventos en la interfaz.
 
