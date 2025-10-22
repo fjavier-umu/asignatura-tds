@@ -144,6 +144,31 @@ Es posible aplicar estilos a los componentes JavaFX mediante declaraciones en un
 
 En el ejemplo se establece la propiedad CSS *-fx-padding* en *10* y la propiedad *-fx-border-width* en *3*. Dado que el elemento *style* (que representa a la propiedad *style* del elemento, similar a la propiedad *children* vista anteriormente) está anidado dentro del elemento *Button*, estos estilos se aplicarán a dicho elemento botón.
 
+Se puede **aplicar el CSS directamente en el FXML**
+
+Si tu archivo FXML tiene un nodo raíz (por ejemplo AnchorPane, VBox, etc.), puedes añadir el atributo *stylesheets* directamente al root:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ejemplo.MiControlador"
+            stylesheets="@estilos.css">
+
+    <children>
+        <Label text="Hola Mundo!" layoutX="50" layoutY="50" />
+    </children>
+</AnchorPane>
+```
+
+El valor de stylesheets usa ```@estilos.css```, lo cual indica que el archivo CSS se encuentra en el **mismo directorio que el FXML**. Si está en otro paquete, usas una ruta relativa al classpath, por ejemplo: ```stylesheets="@/com/ejemplo/recursos/estilos.css" ```
+
+También veremos más adelante que se hacer desde el controlador o desde donde se cargue el FXML.
+
 ## Contenedores y Layouts
 
 Un layout (o contenedor) es un nodo especial que organiza automáticamente los elementos hijos (botones, etiquetas, etc.) dentro de la interfaz. Todos heredan de la clase base ```javafx.scene.layout.Pane```.
