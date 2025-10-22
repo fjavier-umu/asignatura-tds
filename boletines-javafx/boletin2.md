@@ -642,11 +642,12 @@ loader.setController(controller);
 
 ### Vinculación de componentes JavaFX a campos del controlador
 
-Se pueden vincular los componentes JavaFX del archivo FXML a campos de la clase controladora. Para vincular un componente JavaFX a un campo de la clase controladora, debe asignar al elemento FXML del componente JavaFX un atributo *fx:id* que contenga como valor el nombre del campo controlador al que se vinculará. 
+Se pueden vincular los componentes JavaFX del archivo FXML a campos de la clase controladora. Para vincular un componente JavaFX a un campo de la clase controladora, debe asignar al elemento FXML del componente JavaFX un atributo *fx:id* que contenga como valor el nombre del campo controlador al que se vinculará y debe ser anotado con @FXML. 
 
 ```java
 public class MiControlador {
-    public Label label1 = null;
+	@FXML
+    public Label label1;
 }
 ```
 El valor del atributo *fx:id* tiene el valor *label1* que es el mismo que el nombre del campo en la clase del controlador al que debe estar vinculado.
@@ -678,6 +679,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 public class MiControlador {
+	@FXML
+    public Label label1;
+	@FXML
+    public Label label2;
 
     @FXML
     public void botonClicked(Event e){
