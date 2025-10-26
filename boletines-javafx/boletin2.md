@@ -133,7 +133,7 @@ Es posible aplicar estilos a los componentes JavaFX mediante declaraciones en un
 <?import javafx.scene.control.Button?>
 
 <VBox xmlns:fx="http://javafx.com/fxml">
-    <Button text="Click me!"/ onAction="reactToClick()">
+    <Button text="Click me!" onAction="#reactToClick()">
         <style>
             -fx-padding: 10;
             -fx-border-width: 3;
@@ -624,7 +624,7 @@ La clase del controlador se especifica en el elemento raíz del archivo FXML uti
 <?import javafx.scene.control.Button?>
 
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="umu.tds.MiControlador" >
-    <Button text="Click!"/ onAction="hacerClick()">
+    <Button text="Click!" onAction="#hacerClick()">
     </Button>
 </VBox>
 ```
