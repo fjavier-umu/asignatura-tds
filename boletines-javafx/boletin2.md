@@ -706,7 +706,7 @@ Por tanto, y resumiendo:
 
 * Los **métodos manejadores** (como *botonClicked()*) se enlazan a los eventos declarados en el FXML.
 
-### Obtención de la instancia del controlador desde FXMLLoader
+### Obtención de la instancia del controlador desde FXMLLoader
 
 Una vez que la instancia de *FXMLLoader* haya cargado el documento FXML, se puede obtener una referencia a la instancia del controlador mediante el método *getController()* del FXMLLoader (objeto *loader*).
 
