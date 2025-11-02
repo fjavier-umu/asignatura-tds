@@ -33,4 +33,5 @@ Plan para la sesión 3:
   * [Scene Builder Download](https://gluonhq.com/products/scene-builder/) Versión 25
  
 * [Boletín 2](boletin2.md)
+* [Boletín 3](boletin3.md)
     
