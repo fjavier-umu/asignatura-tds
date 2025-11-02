@@ -34,5 +34,5 @@ Plan para la sesión 3:
  
 * [Boletín 2](boletin2.md)
 * [Boletín 3](boletin3.md)
-* [Shocase paneles y graficas] (https://github.com/fjavier-umu/asignatura-tds/blob/main/JavaFxShowcase/Readme.md)
+* [Shocase paneles y graficas](https://github.com/fjavier-umu/asignatura-tds/blob/main/JavaFxShowcase/Readme.md)
     
