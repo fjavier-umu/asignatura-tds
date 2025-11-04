@@ -435,6 +435,7 @@ scrollPane.setFitToWidth(true);   // Hace que el contenido ocupe todo el ancho
 scrollPane.setFitToHeight(false); // Mantiene el alto libre
 scrollPane.setPannable(true);     // Permite arrastrar el contenido con el ratón
 ```
+### Bordes
 
 JavaFX no tiene un control específico para bordes, sino que los **bordes** se aplican como decoración sobre cualquier nodo o contenedor mediante:
 
