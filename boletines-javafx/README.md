@@ -34,5 +34,5 @@ Plan para la sesión 3:
  
 * [Boletín 2](boletin2.md) - [Ejemplos adicionales](https://github.com/fjavier-umu/asignatura-tds/blob/main/boletines-javafx/boletin2-ejemplosAdicionales.md)
 * [Boletín 3](boletin3.md) 
-* [Shocase paneles y graficas](https://github.com/fjavier-umu/asignatura-tds/blob/main/JavaFxShowcase/Readme.md)
+* [Ejemplo paneles y graficas](https://github.com/fjavier-umu/asignatura-tds/blob/main/JavaFxShowcase/Readme.md)
     
