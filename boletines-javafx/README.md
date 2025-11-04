@@ -32,7 +32,7 @@ Plan para la sesión 3:
   * [JavaFX Download](https://gluonhq.com/products/javafx/) Versión 21
   * [Scene Builder Download](https://gluonhq.com/products/scene-builder/) Versión 25
  
-* [Boletín 2](boletin2.md)
-* [Boletín 3](boletin3.md)
+* [Boletín 2](boletin2.md) - [Ejemplos adicionales](https://github.com/fjavier-umu/asignatura-tds/blob/main/boletines-javafx/boletin2-ejemplosAdicionales.md)
+* [Boletín 3](boletin3.md) 
 * [Shocase paneles y graficas](https://github.com/fjavier-umu/asignatura-tds/blob/main/JavaFxShowcase/Readme.md)
     
