@@ -798,7 +798,7 @@ Por ejemplo, dado un tema ``` dark-theme.css ```
     -fx-prompt-text-fill: #999;
 }
 ```
-[https://openjfx.io/javadoc/21/javafx.graphics/javafx/scene/doc-files/cssref.html#button](JavaFX 21 Css reference)
+[JavaFX 21 Css reference](https://openjfx.io/javadoc/21/javafx.graphics/javafx/scene/doc-files/cssref.html#button)
 
 Y en el código haríamos:
 
