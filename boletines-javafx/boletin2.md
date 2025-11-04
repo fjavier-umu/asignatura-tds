@@ -187,7 +187,7 @@ Entre los contenedores más comunes en JavFX encontramos:
 | **TilePane**   | Rejilla uniforme                          | Similar a `FlowPane` pero con celdas de tamaño igual        | Tableros, miniaturas, iconos                       |
 | **AnchorPane** | Anclaje                                   | Permite fijar nodos a bordes específicos                    | Diseños redimensionables, pantallas adaptativas    |
 
-**IMPORTANTE : _NO_ se recomienda usar el psicionamiento absoluto. Usar siempre otros contenedores con layouts adaptativos para crear interfaces de usuario _responsivas_.**
+**IMPORTANTE : _NO_ se recomienda usar el posicionamiento absoluto. Usar siempre otros contenedores con layouts adaptativos para crear interfaces de usuario _responsivas_.**
 
 ### Ejemplos de Contenedores/Layouts
 
