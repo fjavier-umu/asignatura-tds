@@ -215,6 +215,7 @@ La librería Jackson incluye varias anotaciones con diferentes propósitos:
 
 Por ejemplo, para la clase Producto:
 
+```java
 public class Producto {
 
     @JsonProperty("product_name")
@@ -226,12 +227,13 @@ public class Producto {
     @JsonIgnore
     private double internalCost;
 }
+```
 
 ### Trabajando con datos de tipo lista
 
 Para la deserialización de listas haremos uso de ```new TypeReference<List<T>>()``` en la declaración del tipo en el método read:
 
-```
+```java
 String lista = "[{\"name\":\"Ana\",\"age\":25}]";
 
 List<User> users = mapper.readValue(lista, new TypeReference<List<User>>() {}
