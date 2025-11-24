@@ -229,7 +229,7 @@ public class Producto {
 }
 ```
 
-### Trabajando con datos de tipo lista
+### Trabajando con datos de tipo lista
 
 Para la deserialización de listas haremos uso de ```new TypeReference<List<T>>()``` en la declaración del tipo en el método read:
 
@@ -275,7 +275,7 @@ Dado el siguiente JSON:
 3. Imprime los datos del libro
 4. Serializa nuevamente a JSON en formato tabulado “pretty print”
 
-### Uso de Referencias por ID
+### Uso de Referencias por ID
 
 Jackson tiene una anotación muy útil, ```JsonIdentityInfo```, la cual permite que objeto pueda ser identificado por su propiedad **id**, y si en otro lugar aparece ese mismo **id**, entonces lo trata como una referencia al mismo objeto. Es decir, no insertar los datos completos del objeto (como agregado) si no que usa la referencia a su ID.
 
@@ -379,7 +379,7 @@ Esta configuración permite que Jackson sepa que:
 
 **@JsonBackReference** → este es el lado inverso (no se vuelve a serializar, evitando el bucle).
 
-### Ejercicio 2
+### Ejercicio 2
 
 Implementar un modelo en Java donde:
 
