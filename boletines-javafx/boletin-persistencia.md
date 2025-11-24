@@ -1,7 +1,7 @@
 
 # Patrón Repositorio y Persistencia en JSON
 
-En esta práctica se pretende estudiar cómo gestionar la persistencia en la arquitectura MVC propuesta. Para ello primero se presentará el patrón repositorio el cúal permite abstraernos de la tecnología de acceso persitente a datos y ofrece una colección de operaciones CRUD (Create - Recovery - Update - Delete) para cada tipo de dato persistente. A continuación se verá como persistir la información completa de un modelo objetual usando la librería Java Jackson para almacenar los datos en formato JSON. 
+En esta práctica se pretende estudiar cómo gestionar la persistencia en la arquitectura MVC propuesta. Para ello primero se presentará el patrón repositorio el cual permite abstraernos de la tecnología de acceso persistente a datos y ofrece una colección de operaciones CRUD (Create - Recovery - Update - Delete) para cada tipo de dato persistente. A continuación, se verá como persistir la información completa de un modelo objetual usando la librería Java Jackson para almacenar los datos en formato JSON. 
 
 ## Patrón Repositorio
 
@@ -27,7 +27,7 @@ Sin el patrón repositorio:
 
 - Se reduce la capacidad de testear con facilidad
 
-El patrón repositorio permite crear una capa intermediaria, los **repositorios**, simplificando la arquitecura en capas y permitiendo que el código de acceso a datos queda encapsulado en clase(s) repositorio.
+El patrón repositorio permite crear una capa intermediaria, los **repositorios**, simplificando la arquitectura en capas y permitiendo que el código de acceso a datos queda encapsulado en clase(s) repositorio.
 
 ```
  Capa de Negocio
@@ -41,7 +41,7 @@ Los componentes que definen la arquitectura de este patrón son:
 - **Interfaz del Repositorio**: Define las operaciones (interfaz o contrato)
 - **Implementación**: Contiene el acceso real a datos (la clase de implementación que accede a los datos mediante el uso de la tecnología oportuna, en nuestro caso la librería Jackson).
 
-De este modo, las interfaces del repositorio abstraen de las clases concretas de implementación que acceden a los datos, generando (desde el punto de vista del cleinte del repositorio) un acceso transparente e independiente de la tecnología.
+De este modo, las interfaces del repositorio abstraen de las clases concretas de implementación que acceden a los datos, generando (desde el punto de vista del cliente del repositorio) un acceso transparente e independiente de la tecnología.
 
 Un ejemplo de Repositorio de Productos:
 
@@ -96,9 +96,9 @@ Los beneficios de usar el patrón Repositorio son:
 - **Reutilización**	: Se centralizan todas las consultas comunes en un solo lugar.
 - **Evolución del sistema** :	Facilita el cambio de la tecnología de datos sin afectar a las capas superiores.
 
-A la hora de aplicar el patron Repositorio debemos **evitar meter la lógica compleja dentro del repositorio**. Esta debería permanecer en las clases del dominio, no en las clases del acceso a los datos.
+A la hora de aplicar el patrón Repositorio debemos **evitar meter la lógica compleja dentro del repositorio**. Esta debería permanecer en las clases del dominio, no en las clases del acceso a los datos.
 
-Por otro lado, un error común a la hora de definir las interfaces de los repositorios es hacer repositorios genéricos y solo CRUD. De acuerdo a la metodología DDD (Domain-Driven Design) el repositorio debe expresar el lenguaje del dominio, haciendo explícito lo que es importante en el negocio. Por ejemplo:
+Por otro lado, un error común a la hora de definir las interfaces de los repositorios es hacer repositorios genéricos y solo CRUD. De acuerdo con la metodología DDD (Domain-Driven Design) el repositorio debe expresar el lenguaje del dominio, haciendo explícito lo que es importante en el negocio. Por ejemplo:
 
 ```Java
 List<Product> findByPriceGreaterThan(double price);
@@ -107,13 +107,13 @@ List<Product> findScarceProducts();
 //define qué significa 'productos escasos'
 ```
 
-En resumen, el patrón se utiliza para introducir independencia con la tecnología de almacenamienta en una arquitectura organizada en capas (como MVC, arquitectura limpia o hexagonal). Permite además abstraerse de un origen de datos concreto, facilitando tener incluso varios orígenes de datos configurados en el sistema. Por último permite tener centralizada la lógica referente a la persistencia en una capa mediante una interfaz de operaciones CRUD simple y clara. 
+En resumen, el patrón se utiliza para introducir independencia con la tecnología de almacenamiento en una arquitectura organizada en capas (como MVC, arquitectura limpia o hexagonal). Permite además abstraerse de un origen de datos concreto, facilitando tener incluso varios orígenes de datos configurados en el sistema. Por último, permite tener centralizada la lógica referente a la persistencia en una capa mediante una interfaz de operaciones CRUD simple y clara. 
 
 
 ## Persistencia en JSON (usando librería Jackson)
 
 Jackson es una librería de Java para Serializar objetos Java → JSON y 
-Deserializar JSON → objetos Java. Es actualmente el estándar de facto en Java gracias su facilidad de uso. Además presenta un alto rendimiento y se integra fácilmente con frameworks como Spring o librería como JAX-RS.
+Deserializar JSON → objetos Java. Es actualmente el estándar de facto en Java gracias su facilidad de uso. Además, presenta un alto rendimiento y se integra fácilmente con frameworks como Spring o librería como JAX-RS.
 
 Para incluirlo en un proyecto Maven, añadir la dependencia en el ```pom.xml```
 
@@ -160,10 +160,10 @@ public class User {
 En este ejemplo, un objeto JSON de tipo ```User``` tendrá la estructura ```{ "name" : "Ana", "age" : 25 }```
 
 Cuestiones a considerar para la implementación:
-- Las clases a serializar/deserializar deben tener al menos un cosntructor por defecto (obligatorio).
+- Las clases a serializar/deserializar deben tener al menos un constructor por defecto (obligatorio).
 - Las propiedades con métodos accesores serán las usadas para serializar/deserializar. En el contenido JSON se creará un atributo por cada propiedad
 
-Para serializar/deserializar es necesario instanciar un objeto de tipo ```ObjectMapper```. Este mapper contendrá métodos de serizalización (```writeValue wrtiteValueAsString ..```) y deserialización (```readValue ..```):
+Para serializar/deserializar es necesario instanciar un objeto de tipo ```ObjectMapper```. Este mapper contendrá métodos de serialización (```writeValue wrtiteValueAsString ..```) y deserialización (```readValue ..```):
 
 ```java
 ObjectMapper mapper = new ObjectMapper();
@@ -275,7 +275,7 @@ Dado el siguiente JSON:
 
 ### Uso de Referencias por ID
 
-Jackson tiene una anotación muy útil, ```JsonIdentityInfo```, la cual permite que objeto pueda ser identificado por su propiedad **id**, y si en otro lugar aparece ese mismo **id**, entonces lo traata como una referencia al mismo objeto. Es decir, no insertar los datos completos del objeto (como agregado) si no que usa la referencia a us ID.
+Jackson tiene una anotación muy útil, ```JsonIdentityInfo```, la cual permite que objeto pueda ser identificado por su propiedad **id**, y si en otro lugar aparece ese mismo **id**, entonces lo trata como una referencia al mismo objeto. Es decir, no insertar los datos completos del objeto (como agregado) si no que usa la referencia a su ID.
 
 ```
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
@@ -318,7 +318,7 @@ public class Producto {
   { "codigo": 1, "nombre": "Televisor", "categoria": 10 }
 ]
 ```
-Es decir, Jackson reconstruirá los objetos correctamente y vinculará el Producto con su Categoria.
+Es decir, Jackson reconstruirá los objetos correctamente y vinculará el Producto con su Categoría.
 
 Se debe tener en cuenta en **@JsonIdentityInfo** que la propiedad usada como ID debe existir y ser única.
 Por otro lado, se debe también tener en cuenta que cuando un atributo de una clase se define como ```final```, Jackson siempre lo trata como composición (Agregación), no como referencia independiente.
