@@ -392,5 +392,52 @@ Implementar un modelo en Java donde:
 	- (2) ```@JsonManagedReference + @JsonBackReference```
 
 
+### Manejo de jerarquías de clases
+
+En el caso de que tengamos una jerarquía de clases, Jackson necesita conocer qué subtipo concreto tiene que instanciar al deserializar. Aunque existen varios métodos, el más recomendable es incluir un nuevo campo en JSON  que indique el tipo de la subclase. Para hacerlo, es necesario incluir en la superclase las siguentes anotaciones:
+
+ * ```@JsonTypeInfo```: Indica el nombre de la nueva propiedad que indicará la subclase del objeto.
+ * ```@JsonSubTypes```: Indica la clase que se corresponde con cada posible valor de la propiedad.
+
+Por ejemplo, supongamos que hay una clase `Editorial` que mantiene una lista de tipo `Publicacion`, y ésta tiene dos subtipos: `Libro` y `Revista`.
+
+![Ejemplo de jerarquía para persistencia](./imagenes/persistencia-ejemploJerarquia.png)
+
+Para poder serializar y deserializar `Editorial`, en la clase `Publicación` sería necesario añadir las siguientes anotaciones:
+
+```java
+
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.PROPERTY,
+        property = "tipo")
+@JsonSubTypes({
+    @JsonSubTypes.Type(value = Libro.class, name = "libro"),
+    @JsonSubTypes.Type(value = Revista.class, name = "revista")
+})
+public class Publicacion {
+
+...
+
+}
+```
+
+Al serializar, se obtendría un JSON con el campo _tipo_ indicando la subclase:
+
+```json
+{
+  "publicaciones" : [ {
+    "tipo" : "libro",
+    "titulo" : "El Hobbit",
+    "autor" : "J.R.R. Tolkien"
+  }, {
+    "tipo" : "revista",
+    "titulo" : "National Geographic",
+    "numero" : 150
+  } ]
+}
+```
+
+
 
 
